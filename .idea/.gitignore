@@ -1,0 +1,12 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+/tasks.xml
+
+# Sonar Plugin files
+/sonarlint
+
+# Should be unnecessary with Maven auto-import
+/compiler.xml
+/jarRepositories.xml
+/uiDesigner.xml

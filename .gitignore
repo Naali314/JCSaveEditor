@@ -1,0 +1,10 @@
+# IntellJ stuff
+*.iml
+**/.idea/workspace.xml
+**/.idea/tasks.xml
+
+# built stuff
+/target
+
+# maven-shade related, not needed in VCS
+/dependency-reduced-pom.xml
