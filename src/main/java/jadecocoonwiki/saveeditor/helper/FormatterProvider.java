@@ -9,9 +9,9 @@ public final class FormatterProvider
     {
     }
 
-    public static NumberFormatter getStatsFormatter()
+    public static NumberFormatter getSignedByteFormatter()
     {
-        return getFormatter(Short.class, (short) 0, (short) 99);
+        return getFormatter(Byte.class, (byte) -128, (byte) 127);
     }
 
     public static NumberFormatter getHPFormatter()
@@ -19,9 +19,9 @@ public final class FormatterProvider
         return getFormatter(Integer.class, 1, 999);
     }
 
-    public static NumberFormatter getUnsignedIntegerFormatter()
+    public static NumberFormatter getStatsFormatter()
     {
-        return getFormatter(Long.class, 0L, 0xFFFFFFFFL);
+        return getFormatter(Short.class, (short) 0, (short) 99);
     }
 
     public static NumberFormatter getMoneyFormatter()

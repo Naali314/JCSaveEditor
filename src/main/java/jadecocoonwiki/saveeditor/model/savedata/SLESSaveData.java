@@ -21,6 +21,17 @@ public class SLESSaveData extends JCSaveData
     private static final int ADDRESS_MINION_ONE_EXISTENCE = 0xC88;
     private static final int ADDRESS_MINION_ONE_CURRENT_HP = 0xCCC;
     private static final int ADDRESS_MINION_ONE_MAXIMUM_HP = 0xCCE;
+    private static final int ADDRESS_MINION_ONE_DM_FIRE = 0xCD4;
+    private static final int ADDRESS_MINION_ONE_DM_AIR = 0xCD5;
+    private static final int ADDRESS_MINION_ONE_DM_EARTH = 0xCD6;
+    private static final int ADDRESS_MINION_ONE_DM_WATER = 0xCD7;
+    private static final int ADDRESS_MINION_ONE_DM_POISON = 0xCD8;
+    private static final int ADDRESS_MINION_ONE_DM_SLEEP = 0xCD9;
+    private static final int ADDRESS_MINION_ONE_DM_FLESH_TO_STONE = 0xCDA;
+    private static final int ADDRESS_MINION_ONE_DM_DEATH = 0xCDB;
+    private static final int ADDRESS_MINION_ONE_DM_ABSORPTION = 0xCDC;
+    private static final int ADDRESS_MINION_ONE_DM_HEALING = 0xCDD;
+    private static final int ADDRESS_MINION_ONE_DM_BASIC_ATTACK = 0xCDE;
     private static final int ADDRESS_MINION_ONE_ATTACK = 0xCE0;
     private static final int ADDRESS_MINION_ONE_DEFENSE = 0xCE1;
     private static final int ADDRESS_MINION_ONE_MAGIC_ATTACK = 0xCE2;
@@ -104,49 +115,120 @@ public class SLESSaveData extends JCSaveData
     @Override
     protected int getMinionExistenceAddress(int slot)
     {
-        return ADDRESS_MINION_ONE_EXISTENCE + (slot * MINION_DATA_SIZE);
+        return ADDRESS_MINION_ONE_EXISTENCE + getMinionOffset(slot);
     }
 
     @Override
     protected int getMinionCurrentHPAddress(int slot)
     {
-        return ADDRESS_MINION_ONE_CURRENT_HP + (slot * MINION_DATA_SIZE);
+        return ADDRESS_MINION_ONE_CURRENT_HP + getMinionOffset(slot);
     }
 
     @Override
     protected int getMinionMaximumHPAddress(int slot)
     {
-        return ADDRESS_MINION_ONE_MAXIMUM_HP + (slot * MINION_DATA_SIZE);
+        return ADDRESS_MINION_ONE_MAXIMUM_HP + getMinionOffset(slot);
+    }
+
+    @Override
+    protected int getMinionDMFireAddress(int slot)
+    {
+        return ADDRESS_MINION_ONE_DM_FIRE + getMinionOffset(slot);
+    }
+
+    @Override
+    protected int getMinionDMAirAddress(int slot)
+    {
+        return ADDRESS_MINION_ONE_DM_AIR + getMinionOffset(slot);
+    }
+
+    @Override
+    protected int getMinionDMEarthAddress(int slot)
+    {
+        return ADDRESS_MINION_ONE_DM_EARTH + getMinionOffset(slot);
+    }
+
+    @Override
+    protected int getMinionDMWaterAddress(int slot)
+    {
+        return ADDRESS_MINION_ONE_DM_WATER + getMinionOffset(slot);
+    }
+
+    @Override
+    protected int getMinionDMPoisonAddress(int slot)
+    {
+        return ADDRESS_MINION_ONE_DM_POISON + getMinionOffset(slot);
+    }
+
+    @Override
+    protected int getMinionDMSleepAddress(int slot)
+    {
+        return ADDRESS_MINION_ONE_DM_SLEEP + getMinionOffset(slot);
+    }
+
+    @Override
+    protected int getMinionDMFleshToStoneAddress(int slot)
+    {
+        return ADDRESS_MINION_ONE_DM_FLESH_TO_STONE + getMinionOffset(slot);
+    }
+
+    @Override
+    protected int getMinionDMDeathAddress(int slot)
+    {
+        return ADDRESS_MINION_ONE_DM_DEATH + getMinionOffset(slot);
+    }
+
+    @Override
+    protected int getMinionDMAbsorptionAddress(int slot)
+    {
+        return ADDRESS_MINION_ONE_DM_ABSORPTION + getMinionOffset(slot);
+    }
+
+    @Override
+    protected int getMinionDMHealingAddress(int slot)
+    {
+        return ADDRESS_MINION_ONE_DM_HEALING + getMinionOffset(slot);
+    }
+
+    @Override
+    protected int getMinionDMBasicAttackAddress(int slot)
+    {
+        return ADDRESS_MINION_ONE_DM_BASIC_ATTACK + getMinionOffset(slot);
     }
 
     @Override
     protected int getMinionAttackAddress(int slot)
     {
-        return ADDRESS_MINION_ONE_ATTACK + (slot * MINION_DATA_SIZE);
+        return ADDRESS_MINION_ONE_ATTACK + getMinionOffset(slot);
     }
 
     @Override
     protected int getMinionDefenseAddress(int slot)
     {
-        return ADDRESS_MINION_ONE_DEFENSE + (slot * MINION_DATA_SIZE);
+        return ADDRESS_MINION_ONE_DEFENSE + getMinionOffset(slot);
     }
 
     @Override
     protected int getMinionMagicAttackAddress(int slot)
     {
-        return ADDRESS_MINION_ONE_MAGIC_ATTACK + (slot * MINION_DATA_SIZE);
+        return ADDRESS_MINION_ONE_MAGIC_ATTACK + getMinionOffset(slot);
     }
 
     @Override
     protected int getMinionMagicDefenseAddress(int slot)
     {
-        return ADDRESS_MINION_ONE_MAGIC_DEFENSE + (slot * MINION_DATA_SIZE);
+        return ADDRESS_MINION_ONE_MAGIC_DEFENSE + getMinionOffset(slot);
     }
 
     @Override
     protected int getMinionSpeedAddress(int slot)
     {
-        return ADDRESS_MINION_ONE_SPEED + (slot * MINION_DATA_SIZE);
+        return ADDRESS_MINION_ONE_SPEED + getMinionOffset(slot);
+    }
+
+    private int getMinionOffset(int slot)
+    {
+        return MINION_DATA_SIZE * slot;
     }
 
 

@@ -27,6 +27,18 @@ public class UnsignedByteBufferWrapper
 
     // ---------------------------------------------------------------
 
+    public byte getSignedByte(int position)
+    {
+        return buffer.get(position);
+    }
+
+    public void putSignedByte(int position, byte value)
+    {
+        buffer.put(position, value);
+    }
+
+    // ---------------------------------------------------------------
+
     public int getUnsignedShort(int position)
     {
         return (buffer.getShort(position) & 0xffff);

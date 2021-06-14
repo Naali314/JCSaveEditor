@@ -6,7 +6,7 @@
 
     <groupId>org.example</groupId>
     <artifactId>JCSaveEditor</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.2-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

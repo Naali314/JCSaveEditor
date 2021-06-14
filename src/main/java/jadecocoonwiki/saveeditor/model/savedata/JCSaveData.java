@@ -151,6 +151,138 @@ public abstract class JCSaveData extends SaveData
         buffer.putUnsignedShort(getMinionMaximumHPAddress(slot), newValue);
     }
 
+    protected abstract int getMinionDMFireAddress(int slot);
+
+    public byte getMinionDMFire(int slot)
+    {
+        return buffer.getSignedByte(getMinionDMFireAddress(slot));
+    }
+
+    public void setMinionDMFire(int slot, byte newValue)
+    {
+        buffer.putSignedByte(getMinionDMFireAddress(slot), newValue);
+    }
+
+    protected abstract int getMinionDMAirAddress(int slot);
+
+    public byte getMinionDMAir(int slot)
+    {
+        return buffer.getSignedByte(getMinionDMAirAddress(slot));
+    }
+
+    public void setMinionDMAir(int slot, byte newValue)
+    {
+        buffer.putSignedByte(getMinionDMAirAddress(slot), newValue);
+    }
+
+    protected abstract int getMinionDMEarthAddress(int slot);
+
+    public byte getMinionDMEarth(int slot)
+    {
+        return buffer.getSignedByte(getMinionDMEarthAddress(slot));
+    }
+
+    public void setMinionDMEarth(int slot, byte newValue)
+    {
+        buffer.putSignedByte(getMinionDMEarthAddress(slot), newValue);
+    }
+
+    protected abstract int getMinionDMWaterAddress(int slot);
+
+    public byte getMinionDMWater(int slot)
+    {
+        return buffer.getSignedByte(getMinionDMWaterAddress(slot));
+    }
+
+    public void setMinionDMWater(int slot, byte newValue)
+    {
+        buffer.putSignedByte(getMinionDMWaterAddress(slot), newValue);
+    }
+
+    protected abstract int getMinionDMPoisonAddress(int slot);
+
+    public byte getMinionDMPoison(int slot)
+    {
+        return buffer.getSignedByte(getMinionDMPoisonAddress(slot));
+    }
+
+    public void setMinionDMPoison(int slot, byte newValue)
+    {
+        buffer.putSignedByte(getMinionDMPoisonAddress(slot), newValue);
+    }
+
+    protected abstract int getMinionDMSleepAddress(int slot);
+
+    public byte getMinionDMSleep(int slot)
+    {
+        return buffer.getSignedByte(getMinionDMSleepAddress(slot));
+    }
+
+    public void setMinionDMSleep(int slot, byte newValue)
+    {
+        buffer.putSignedByte(getMinionDMSleepAddress(slot), newValue);
+    }
+
+    protected abstract int getMinionDMFleshToStoneAddress(int slot);
+
+    public byte getMinionDMFleshToStone(int slot)
+    {
+        return buffer.getSignedByte(getMinionDMFleshToStoneAddress(slot));
+    }
+
+    public void setMinionDMFleshToStone(int slot, byte newValue)
+    {
+        buffer.putSignedByte(getMinionDMFleshToStoneAddress(slot), newValue);
+    }
+
+    protected abstract int getMinionDMDeathAddress(int slot);
+
+    public byte getMinionDMDeath(int slot)
+    {
+        return buffer.getSignedByte(getMinionDMDeathAddress(slot));
+    }
+
+    public void setMinionDMDeath(int slot, byte newValue)
+    {
+        buffer.putSignedByte(getMinionDMDeathAddress(slot), newValue);
+    }
+
+    protected abstract int getMinionDMAbsorptionAddress(int slot);
+
+    public byte getMinionDMAbsorption(int slot)
+    {
+        return buffer.getSignedByte(getMinionDMAbsorptionAddress(slot));
+    }
+
+    public void setMinionDMAbsorption(int slot, byte newValue)
+    {
+        buffer.putSignedByte(getMinionDMAbsorptionAddress(slot), newValue);
+    }
+
+    protected abstract int getMinionDMHealingAddress(int slot);
+
+    public byte getMinionDMHealing(int slot)
+    {
+        return buffer.getSignedByte(getMinionDMHealingAddress(slot));
+    }
+
+    public void setMinionDMHealing(int slot, byte newValue)
+    {
+        buffer.putSignedByte(getMinionDMHealingAddress(slot), newValue);
+    }
+
+    protected abstract int getMinionDMBasicAttackAddress(int slot);
+
+    public byte getMinionDMBasicAttack(int slot)
+    {
+        return buffer.getSignedByte(getMinionDMBasicAttackAddress(slot));
+    }
+
+    public void setMinionDMBasicAttack(int slot, byte newValue)
+    {
+        buffer.putSignedByte(getMinionDMBasicAttackAddress(slot), newValue);
+    }
+
     protected abstract int getMinionAttackAddress(int slot);
 
     public short getMinionAttack(int slot)
